@@ -1,9 +1,8 @@
 import { clerkMiddleware } from '@clerk/nextjs/server'
 
 export default clerkMiddleware({
-  publicRoutes: ["/", "/dashboard"],
+  publicRoutes: ["/",'/profile'],
 })
-
 
 export const config = {
   matcher: [

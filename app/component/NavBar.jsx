@@ -20,8 +20,8 @@ export default function NavBar() {
         <Image
           src={Logo.src}
           alt='Peak Pets Logo'
-          width = {280}
-          height={190}
+          width = {300}
+          height={200}
           quality ={100}
         />
       </Link>
@@ -30,10 +30,10 @@ export default function NavBar() {
         {!userId && (
           <>
             <Link href="sign-in" className='text-gray-900 hover:text-gray-600 mr-4 text-xl'>
-              Sign In
+              Sign in
             </Link>
             <Link href="sign-up" className='text-gray-900 hover:text-gray-600 mr-4 text-xl'>
-              Sign Up
+              Sign up
             </Link>
           </>
         )}
@@ -47,7 +47,7 @@ export default function NavBar() {
         )}
 
         <div>
-          <UserButton className="flex"/>
+          <UserButton className="flex" afterSignOutUrl='/'/>
         </div>
       </div>
     </nav>
