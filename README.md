@@ -65,3 +65,7 @@ When users successfully sign up, redirect them to the dashboard page.
 NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL=/dashboard
 NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL=/dashboard
 ```
+
+## Reflective:
+
+``Dashboard Page:

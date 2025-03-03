@@ -38,7 +38,7 @@ const DashboardPage = () => {
         </h1>
       </div>
 
-      <div>
+      <div className="grid gap-3 mx-2 lg:">
         <div className='flex'>
               <Image
                 src={Pet.src}
