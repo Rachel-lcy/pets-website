@@ -29,6 +29,7 @@ Add ClerkProvider to the layout file
 ## Design Decision
 
 ``Visual Layout:
+
 A clean and modern design was chosen to ensure an intuitive user experience.
 
 A masonry grid layout was implemented for the pet image gallery to create a visually appealing and organized display.
@@ -49,4 +50,18 @@ A flexible grid system ensures elements resize and rearrange dynamically based o
 
 ```
 
+```
+
+## Challenges and Solutions:
+
+``Challenge:
+When users successfully sign up, redirect them to the dashboard page.
+
+`Solution:
+`1. I used afterSignUpUrl = "/dashboard" , no matter how I fix it, this syntax doesn't work
+``2. I tried to find the document, https://stackoverflow.com/questions/78359377/how-to-redirect-to-previous-route-after-authentication-sing-in-or-sign-up-in-c the website give me ideas to address this problem, in the .env.local file, I added the two lines of code:
+
+```bash
+NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL=/dashboard
+NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL=/dashboard
 ```
