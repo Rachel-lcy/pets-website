@@ -47,4 +47,5 @@ Soft pastel and neutral colors were used to create a welcoming and warm atmosphe
 The website is fully responsive and optimized for different screen sizes, including mobile, tablet, and desktop views.
 
 A flexible grid system ensures elements resize and rearrange dynamically based on the viewport.
+
 ````
