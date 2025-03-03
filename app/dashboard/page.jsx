@@ -14,14 +14,10 @@ import Labrador from "./labrador-retriever.png";
 import ScottishFold from "./scottish-fold.png";
 import Poddle from "./Poodle.png";
 import SiameseCat from "./siamese-cat.png";
-
-
-
 import Activity from "./activity.jpg"
 import Toys from "./toys.jpg"
 import Behavior from "./behavior.jpg"
 import Traning from "./traning.jpg"
-
 import Image from 'next/image';
 
 const DashboardPage = () => {
@@ -219,7 +215,7 @@ const DashboardPage = () => {
         </div>
       </div>
     </main>
-    
+
   )
 }
 export default DashboardPage

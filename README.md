@@ -1,3 +1,7 @@
+## README
+
+``Goal: set up Clerk authentication for logo in,sign up, logo out; when the user sign up, you will automatically transfer to the Dashboard!
+
 ## Getting Started
 
 First, run the development server:
@@ -26,9 +30,19 @@ create .env.local file
 Add ClerkProvider to the layout file
 ```
 
+## Resource
+
+- [Authentication with Clerk](https://clerk.com/docs/quickstarts/nextjs-pages-router)
+- [Nextjs structure information](https://nextjs.org/docs)
+- [Create Middleware.js, in the root of the file](https://clerk.com/docs/references/nextjs/clerk-middleware)
+
+- [How to redirect to previous route after authentication (sing-in or sign-up) in clerk using it with nextjs](https://stackoverflow.com/questions/78359377/how-to-redirect-to-previous-route-after-authentication-sing-in-or-sign-up-in-c)
+
+- [ use tailwindCSS cheat sheet](https://nerdcave.com/tailwind-cheat-sheet)
+
 ## Design Decision
 
-`Visual Layout:
+- [Visual Layout]:
 
 ``A clean and modern design was chosen to ensure an intuitive user experience.
 
@@ -36,36 +50,29 @@ Add ClerkProvider to the layout file
 
 ``The dashboard page was designed with card components to categorize pet information effectively.
 
-`Typography and Color Scheme:
+- [Typography and Color Scheme:]
 
 ``The application uses a simple, readable font style to enhance accessibility.
 
 ``Soft pastel and neutral colors were used to create a welcoming and warm atmosphere.
 
-`Responsive Design:
+- [Responsive Design:]
 
 ``The website is fully responsive and optimized for different screen sizes, including mobile, tablet, and desktop views.
 
 ``A flexible grid system ensures elements resize and rearrange dynamically based on the viewport.
 
-```
-
-```
-
 ## Challenges and Solutions:
 
-`Challenge:
-When users successfully sign up, redirect them to the dashboard page.
+- [Challenge:]
+  When users successfully sign up, redirect them to the dashboard page.
 
-`Solution:
-`1. I used afterSignUpUrl = "/dashboard" , no matter how I fix it, this syntax doesn't work
-``2. I tried to find the document, https://stackoverflow.com/questions/78359377/how-to-redirect-to-previous-route-after-authentication-sing-in-or-sign-up-in-c the website give me ideas to address this problem, in the .env.local file, I added the two lines of code:
+- [Solution:]
+  `1. I used afterSignUpUrl = "/dashboard" , no matter how I fix it, this syntax doesn't work;
+
+  `2. I tried to find the document, https://stackoverflow.com/questions/78359377/how-to-redirect-to-previous-route-after-authentication-sing-in-or-sign-up-in-c the website give me ideas to address this problem, in the .env.local file, I added the two lines of code, then it worked for my website!
 
 ```bash
 NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL=/dashboard
 NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL=/dashboard
 ```
-
-## Reflective:
-
-``Dashboard Page:
