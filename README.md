@@ -27,7 +27,7 @@ create .env.local file
 ```
 
 ```bash
-Add ClerkProvider to the layout file
+Add ClerkProvider to the layout file, cover all the <html></html>;
 ```
 
 ## Resource
@@ -44,7 +44,7 @@ Add ClerkProvider to the layout file
 
 - [Visual Layout]:
 
-``A clean and modern design was chosen to ensure an intuitive user experience.
+`A clean and modern design was chosen to ensure an intuitive user experience.
 
 ``A minimalist grid layout was implemented for the pet image gallery to create a visually appealing and organized display.
 
@@ -76,3 +76,7 @@ Add ClerkProvider to the layout file
   NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL=/dashboard
   NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL=/dashboard
   ```
+
+## others
+
+`` I Wrote one <Login> page and one <signin> page for meeting the rubrics-User Login From part!!

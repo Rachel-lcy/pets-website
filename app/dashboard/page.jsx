@@ -19,6 +19,7 @@ import Toys from "./toys.jpg"
 import Behavior from "./behavior.jpg"
 import Traning from "./traning.jpg"
 import Image from 'next/image';
+import Footer from '../component/Footer';
 
 const DashboardPage = () => {
   const { isSignedIn, user } = useUser();
@@ -34,7 +35,7 @@ const DashboardPage = () => {
         </h1>
       </div>
 
-      <div className="grid gap-3 mx-2 lg:">
+      <div className="grid gap-3 mx-2">
         <div className='flex'>
               <Image
                 src={Pet.src}
@@ -214,7 +215,9 @@ const DashboardPage = () => {
           </div>
         </div>
       </div>
+      <Footer className="my-5"/>
     </main>
+    
 
   )
 }
