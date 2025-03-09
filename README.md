@@ -40,6 +40,8 @@ Add ClerkProvider to the layout file, cover all the <html></html>;
 
 - [ use tailwindCSS cheat sheet](https://nerdcave.com/tailwind-cheat-sheet)
 
+- [ How to use the useSignIn() hook ](https://clerk.com/docs/references/react/use-sign-in#how-to-use-the-use-sign-in-hook)
+
 ## Design Decision
 
 - [Visual Layout]:

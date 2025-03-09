@@ -2,8 +2,44 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-5">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center  p-8 pb-20 gap-16 sm:p-5">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <div className="flex flex-col items-center justify-center  w-full">
+
+          <div className="grid gap-4 text-center text-gray-700 mt-2 max-w-prose mb-2">
+            <h1 className="text-5xl font-bold tracking-wide mb-4 ">
+              Welcome to Peak Pets 🐾
+            </h1>
+            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
+              A Paradise for Pet Lovers!
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              At Peak Pets, we celebrate the joy and companionship that pets bring into our lives. 
+              Whether you're a cat lover or a dog enthusiast, you'll find endless inspiration and 
+              heartwarming moments right here!
+            </p>
+          </div>
+
+          <div className="flex justify-center items-center">
+            <div className="grid gap-6 text-center text-gray-700 mt-2 max-w-prose">
+              <p className="text-xl font-semibold">📸 Discover Adorable Moments</p>
+              <p className="text-lg max-w-lg">
+                Browse our pet gallery and let these furry friends brighten your day.
+              </p>
+
+              <p className="text-xl font-semibold">🛍️ Find the Best Pet Products</p>
+              <p className="text-lg max-w-lg">
+                Explore top-rated toys, treats, and care essentials to keep your pets happy and healthy.
+              </p>
+
+              <p className="text-xl font-semibold">🐶🐱 Join the Pet Community</p>
+              <p className="text-lg max-w-lg">
+                Connect with fellow pet lovers, share your pet’s stories, and get expert care tips.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <div className="flex">
           <div className="grid gap-3 mx-2">
             <Image

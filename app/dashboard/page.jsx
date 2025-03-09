@@ -217,7 +217,6 @@ const DashboardPage = () => {
       </div>
       <Footer className="my-5"/>
     </main>
-    
 
   )
 }
