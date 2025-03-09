@@ -81,4 +81,4 @@ Add ClerkProvider to the layout file, cover all the <html></html>;
 
 ## others
 
-`` I Wrote one <Login> page and one <signin> page for meeting the rubrics-User Login From part!!
+`` I Wrote one Login page and one signin page for meeting the rubrics-User Login From part!!
