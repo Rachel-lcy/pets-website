@@ -1,7 +1,13 @@
+"use client"
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import NavBar from "./component/NavBar";
 import { ClerkProvider } from "@clerk/nextjs";
+import HeroImage from "./component/HeroImage";
+import Footer from "./component/Footer";
+import TestimonialPage from "./component/Testimonials";
+import { usePathname } from "next/navigation";
+
 
 const roboto = Roboto({
   weight: '400',
@@ -9,20 +15,23 @@ const roboto = Roboto({
 })
 
 export default function RootLayout({ children }) {
+  const pathname = usePathname();
   return (
     < ClerkProvider>
       <html lang="en">
-      <body
-        className={roboto.className}
-      >
-        <NavBar />
-        <main className="container mx-auto">
-          <div className="flex items-start justify-center min-h-screen">
-            {children}
-          </div>
-        </main>
-      </body>
-    </html>
+        <body className={roboto.className}>
+          <NavBar />
+          <HeroImage />
+          <main className="container mx-auto">
+            <div className="flex items-start justify-center min-h-screen">
+              {children}
+            </div>
+          </main>
+          {pathname === '/' && <TestimonialPage />}
+          
+        </body>
+        <Footer />
+      </html>
     </ClerkProvider>
   );
 }

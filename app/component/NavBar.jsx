@@ -12,19 +12,23 @@ export default function NavBar() {
     <nav className='flex items-center justify-between px-6 py-4 mb-5 my-5'>
       <div >
         <Link href='/' className='mr-3 text-xl'>Home </Link>
+        <Link href='/contact' className='mr-3 text-xl'>Community </Link>
         <Link href='/about' className='mr-3 text-xl'>About </Link>
         <Link href='/contact' className='mr-3 text-xl'>Contact </Link>
+        <Link href='/dashboard' className='mr-3 text-xl'>Dashboard </Link>
       </div>
 
-      <Link href="/">
-        <Image
-          src={Logo.src}
-          alt='Peak Pets Logo'
-          width = {230}
-          height={150}
-          quality ={100}
-        />
-      </Link>
+      <div>
+        <Link href="/">
+          <Image
+            src={Logo.src}
+            alt='Peak Pets Logo'
+            width = {260}
+            height={150}
+            quality ={100}
+          />
+        </Link>
+      </div>
 
       <div className='flex'>
         {!userId && (

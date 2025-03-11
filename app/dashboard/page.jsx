@@ -19,15 +19,13 @@ import Toys from "./toys.jpg"
 import Behavior from "./behavior.jpg"
 import Traning from "./traning.jpg"
 import Image from 'next/image';
-import Footer from '../component/Footer';
 
 const DashboardPage = () => {
   const { isSignedIn, user } = useUser();
   if(!isSignedIn) return <h1 className="text-2xl font-bold"> Loading...</h1>
 
   return (
-    <main className='box-border max-w-full justify-center justify-items-center' >
-
+    <div className='box-border max-w-full justify-center justify-items-center' >
       <div className="p-4 font-bold my-5">
         <h1 className="text-3xl font-bold tracking-wide mb-4">
         Welcome, {user?.firstName || "Guest"}!<br />
@@ -215,9 +213,7 @@ const DashboardPage = () => {
           </div>
         </div>
       </div>
-      <Footer className="my-5"/>
-    </main>
-
+    </div>
   )
 }
 export default DashboardPage
