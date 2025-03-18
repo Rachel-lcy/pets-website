@@ -7,6 +7,7 @@ import HeroImage from "./component/HeroImage";
 import Footer from "./component/Footer";
 import TestimonialPage from "./component/Testimonials";
 import { usePathname } from "next/navigation";
+import AboutUs from "./component/About";
 
 
 const roboto = Roboto({
@@ -21,16 +22,14 @@ export default function RootLayout({ children }) {
       <html lang="en">
         <body className={roboto.className}>
           <NavBar />
-          <HeroImage />
           <main className="container mx-auto">
             <div className="flex items-start justify-center min-h-screen">
               {children}
             </div>
           </main>
-          {pathname === '/' && <TestimonialPage />}
-          
+          {/* {pathname === '/' && <TestimonialPage />} */}
+          {/* < AboutUs /> */}
         </body>
-        <Footer />
       </html>
     </ClerkProvider>
   );

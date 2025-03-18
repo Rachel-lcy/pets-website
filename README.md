@@ -107,3 +107,18 @@ Add ClerkProvider to the layout file, cover all the <html></html>;
 `1. Add component like HeroImage, Testimonial, and optimize the Footer page!
 
 ``2. Update the home page and Dashboard page
+
+## 20 March Assignment Update
+
+`Install lucide-react using hamburger menu and X menu;
+
+```bash
+npm install lucide-react
+
+```
+
+## Add Components
+
+- [Add AboutUs page]
+- [Add Contact page]
+- [Add Services page]

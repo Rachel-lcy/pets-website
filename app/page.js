@@ -1,193 +1,112 @@
+
+"use client";
 import Image from "next/image";
+import InstagramSection from "./component/InstagramSection";
+import Testimonials from "./component/Testimonials";
+import Footer from "./component/Footer";
+import HeroImagePage from "./component/HeroImage";
+import Services from "./component/Services";
+import Benefits from "./component/Benefits.jsx"
+
 
 export default function Home() {
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center  p-8 pb-20 gap-16 sm:p-5">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div className="flex flex-col items-center justify-center  w-full">
+    <div className="bg-white">
+      {/* Hero Section */}
+      <HeroImagePage />
 
-          <div className="grid gap-4 text-center text-gray-700 mt-2 max-w-prose mb-2">
-            <h1 className="text-5xl font-bold tracking-wide mb-4 ">
-              Welcome to Peak Pets 🐾
-            </h1>
-            <h2 className="text-2xl font-semibold text-gray-700 mb-4">
-              A Paradise for Pet Lovers!
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              At Peak Pets, we celebrate the joy and companionship that pets bring into our lives. 
-              Whether you're a cat lover or a dog enthusiast, you'll find endless inspiration and 
-              heartwarming moments right here!
-            </p>
-          </div>
-
-          <div className="flex justify-center items-center">
-            <div className="grid gap-6 text-center text-gray-700 mt-2 max-w-prose">
-              <p className="text-xl font-semibold">📸 Discover Adorable Moments</p>
-              <p className="text-lg max-w-lg">
-                Browse our pet gallery and let these furry friends brighten your day.
-              </p>
-
-              <p className="text-xl font-semibold">🛍️ Find the Best Pet Products</p>
-              <p className="text-lg max-w-lg">
-                Explore top-rated toys, treats, and care essentials to keep your pets happy and healthy.
-              </p>
-
-              <p className="text-xl font-semibold">🐶🐱 Join the Pet Community</p>
-              <p className="text-lg max-w-lg">
-                Connect with fellow pet lovers, share your pet’s stories, and get expert care tips.
-              </p>
+      {/* 🎯 Intro Section */}
+      <section className="text-center py-16 mb-10">
+        <small className="text-gray-400 text-lg">Intro</small>
+        <h2 className="text-4xl font-bold text-gray-900">Get to know us more</h2>
+        <div className="flex justify-center gap-30 mt-10">
+          {[
+            { title: "Pet Experts", image: "/assets/icons/bird-house.png" , color: "pink-500"},
+            { title: "Vet Services", image: "/assets/icons/vet.png", color: "blue-500" },
+            { title: "Contact Us", image: "/assets/icons/contact-us.png",color: "green-500"  },
+          ].map((item, index) => (
+            <div key={index} className="text-left ">
+              <Image src={item.image} alt={item.title} width={100} height={100} />
+              <h3 className="text-xl font-semibold mt-4">{item.title}</h3>
+              <p className="text-gray-600">A modern pet care service.</p>
+              <button
+                className={`mt-4 px-6 py-3 rounded-full shadow-md
+                  text-${item.color} border-2 border-${item.color}
+                  bg-white hover:bg-${item.color}/20 transition duration-300 cursor-pointer`}>
+                Read More
+                <span className="ml-2">→</span>
+              </button>
             </div>
-          </div>
+          ))}
         </div>
+      </section>
 
-        <div className="flex">
-          <div className="grid gap-3 mx-2">
-            <Image
-            src="/assets/bigger/alvan-nee-8g0D8ZfFXyA-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            />
-            <Image
-            src="/assets/bigger/alvan-nee-ZCHj_2lJP00-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            />
-            <Image
-            src="/assets/bigger/alvan-nee-9M0tSjb-cpA-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            />
-            {/* <Image
-            src="/assets/bigger/alvan-nee-ZCHj_2lJP00-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            /> */}
-            {/* <Image
-            src="/assets/bigger/karsten-winegeart-7sgPfAcM6_o-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            />
-            <Image
-            src="/assets/bigger/karsten-winegeart-BJaqPaH6AGQ-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            /> */}
-          </div>
-          <div className="grid gap-2 mx-2">
-          <Image
-            src="/assets/smaller/cong-h-RWSh0t7bw68-unsplash.jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          />
-          <Image
-            src="/assets/smaller/edson-torres-hjzs2nA4y-k-unsplash.jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          />
-          <Image
-            src="/assets/smaller/karsten-winegeart--_gMskl-uoc-unsplash.jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          />
-          <Image
-            src="/assets/smaller/karsten-winegeart-7UduWMpT618-unsplash.jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          />
-           <Image
-            src="/assets/smaller/karsten-winegeart-ewfHXBcuFA0-unsplash.jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          />
-          {/* <Image
-            src="/assets/smaller/karsten-winegeart-Fqr9Bq7Inz0-unsplash.jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          />
-          <Image
-            src="/assets/smaller/karsten-winegeart-qy0BHykaq0E-unsplash.jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          /> */}
-          {/* <Image
-            src="/assets/smaller/karsten-winegeart-Ln3upC7iFe0-unsplash (1).jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          />
-          <Image
-            src="/assets/smaller/lucrezia-carnelos-F0if-2LD4cA-unsplash (1).jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          />
-          <Image
-            src="/assets/smaller/scott-webb-ttCFWHrmWH4-unsplash.jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          />
-          <Image
-            src="/assets/smaller/victor-g-N04FIfHhv_k-unsplash.jpg"
-            width ={540}
-            height = {327}
-            alt="lovely animals"
-          /> */}
 
-          </div>
-          <div className="grid gap-3 mx-2">
-          <Image
-            src="/assets/bigger/kanashi-BLW_KQ0Rkn0-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            />
-            <Image
-            src="/assets/bigger/karsten-winegeart-Z-rSM6yKgxo-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            />
-            <Image
-            src="/assets/bigger/karsten-winegeart-WaMMo0it6Vg-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            />
-            {/* <Image
-            src="/assets/bigger/karsten-winegeart-YzxeHEzBZ6I-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            /> */}
-            {/* <Image
-            src="/assets/bigger/karsten-winegeart-7sgPfAcM6_o-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            /> */}
-            {/* <Image
-            src="/assets/bigger/karsten-winegeart-nwe2qgAhT4k-unsplash.jpg"
-            width ={440}
-            height = {759}
-            alt="lovely animals"
-            /> */}
-          </div>
+      {/*  About Us Section */}
+      <Services />
+
+
+      {/* 🎯 Featured Products */}
+      <section className="bg-[#FDF2D9] py-16 text-center my-10 ">
+        <div className="leading-loose">
+          <small className="text-gray-400 text-lg">Products</small>
+          <h2 className="text-4xl font-bold">Featured pet products</h2>
         </div>
-      </main>
+        
+        <div className="flex justify-center gap-10 mt-10">
+          {[
+            {
+              title: "Dog Trash Bag",
+              price: "$19.00 CAD",
+              oldPrice: "$25.9 CAD",
+              discount: "-30%",
+              image: "/assets/products/bag.jpg",
+            },
+            {
+              title: "Pet Accessories",
+              price: "$19.00 CAD",
+              oldPrice: "$14.9",
+              image: "/assets/products/Pet Accessories.jpg",
+            },
+            {
+              title: "Dog Food",
+              price: "$22.00 USD",
+              oldPrice: "$149",
+              image: "/assets/products/pet food.jpg",
+            },
+            {
+              title: "Dog Can",
+              price: "$22.00 USD",
+              oldPrice: "$149",
+              image: "/assets/products/dog can.jpg",
+            },
+          ].map((item, index) => (
+            <div key={index} className="bg-white shadow-lg p-6 rounded-lg max-w-prose w-10/12 ">
+              <Image src={item.image} alt={item.title} width={400} height={400} />
+              <h3 className="text-xl font-semibold mt-4">{item.title}</h3>
+              <p className="text-gray-600">Pet Place Webflow Template</p>Pet
+              <p className="text-lg font-bold mt-2">
+                {item.price} <span className="line-through text-gray-500">{item.oldPrice}</span>
+              </p>
+              {/* {item.discount && (
+                <span className="px-2 py-1 bg-red-500 text-white text-sm rounded-full absolute top-2 left-2">
+                  {item.discount}
+                </span>
+              )} */}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <Benefits />
+
+      <Testimonials />
+      <InstagramSection />
+      <Footer />
+
+      
     </div>
   );
 }
+
