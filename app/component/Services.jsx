@@ -1,14 +1,15 @@
 import Image from "next/image"
+import AboutUs from "./About"
+import InstagramSection from "./InstagramSection"
 
 
 export default function Services(){
   return(
-    <>
-    <div className="grid leading-loose">
-      <small className="text-gray-400 text-lg text-center">About us</small>
+    <div className="w-full px-6 py-10">
+    <div className="grid leading-loose text-center">
+      <small className="text-gray-400 text-lg text-center">Our services</small>
       <h2 className="text-4xl font-bold text-center mb-6  text-gray-900">What we can do for you</h2>
     </div>
-      
 
       <div className="grid box-border w-full">
 
@@ -106,6 +107,16 @@ export default function Services(){
           </div>
         </div>
 
+        {/* <section className="py-20 bg-indigo-300 text-white text-center px-4 rounded-full">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl font-bold mb-6">Best Deals for Your Furry Friends! </h2>
+          <p className="text-xl mb-8">Premium pet products at unbeatable prices.</p>
+          <button className="bg-white text-indigo-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+           Shop In Store
+          </button>
+        </div>
+      </section> */}
+      {/* <AboutUs /> */}
       </div>
-    </>
+    </div>
 )}

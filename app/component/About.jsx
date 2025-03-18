@@ -1,5 +1,7 @@
+"use client"
 import { useState, useEffect } from "react";
 import { FaLightbulb, FaHandshake, FaHeart, FaChartLine } from "react-icons/fa";
+import Footer from "./Footer";
 
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -104,7 +106,7 @@ const AboutUs = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => (
               <div key={index} className="text-center p-6 rounded-lg bg-white shadow-lg transform transition-transform duration-300 hover:-translate-y-2">
-                <div className="text-4xl text-blue-500 mb-4">{value.icon}</div>
+                <div className="text-4xl text-purple-500 mb-4">{value.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{value.title}</h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
@@ -114,15 +116,16 @@ const AboutUs = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-300 text-white text-center px-4">
+      <section className="py-20 bg-purple-300 text-white text-center px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-6">Ready to Join Our Journey?</h2>
           <p className="text-xl mb-8">Let's create something amazing together</p>
-          <button className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
+          <button className="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-300">
             Contact Us
           </button>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

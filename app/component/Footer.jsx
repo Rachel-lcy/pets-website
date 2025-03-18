@@ -22,13 +22,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-blue-800 flex items-center gap-2">
+            <h3 className="text-xl font-semibold text-indigo-800 flex items-center gap-2">
               <FaPaw className="text-brown-500" /> Quick Links
             </h3>
             <ul className="space-y-2">
               {["Home", "About Us", "Pet Mall", "Services", "Community", "Contact"].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                  <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-300">
                     {link}
                   </a>
                 </li>
@@ -37,19 +37,19 @@ const Footer = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-blue-800">Contact Us</h3>
+            <h3 className="text-xl font-semibold text-indigo-800">Contact Us</h3>
             <div className="space-y-3">
               <p className="flex items-center gap-2 text-gray-600">
                 <FaMapMarkerAlt className="text-brown-500" />
-                123 Pet Haven Street, Pawsome City
+                123 Peak Pets Street, Lovely City
               </p>
               <p className="flex items-center gap-2 text-gray-600">
                 <FaPhone className="text-brown-500" />
-                (888) 123-4567
+                (587) 836-9310
               </p>
               <p className="flex items-center gap-2 text-gray-600">
                 <FaEnvelope className="text-brown-500" />
-                info@pawsomepets.com
+                hurui.lcy@gmail.comfort
               </p>
               <p className="flex items-center gap-2 text-gray-600">
                 <FaClock className="text-brown-500" />
@@ -59,7 +59,7 @@ const Footer = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-blue-800">Newsletter</h3>
+            <h3 className="text-xl font-semibold text-indigo-800">Newsletter</h3>
             <p className="text-gray-600">Subscribe to get updates on our latest pet care tips and adoption events!</p>
             <form onSubmit={handleSubscribe} className="space-y-2">
               <input
@@ -67,28 +67,28 @@ const Footer = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 required
               />
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                className="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300"
               >
                 Subscribe
               </button>
             </form>
             {isSubscribed && (
-              <p className="text-green-600 animate-fade-in">Thank you for subscribing!</p>
+              <p className="text-indigo-600 animate-fade-in">Thank you for subscribing!</p>
             )}
           </div>
 
 
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-blue-800">Legal</h3>
+            <h3 className="text-xl font-semibold text-indigo-800">Legal</h3>
             <ul className="space-y-2">
               {["Privacy Policy", "Terms of Service", "Cookie Policy", "Accessibility"].map((link) => (
                 <li key={link}>
-                  <a href="#" className="text-gray-600 hover:text-blue-600 transition-colors duration-300">
+                  <a href="#" className="text-gray-600 hover:text-indigo-600 transition-colors duration-300">
                     {link}
                   </a>
                 </li>
@@ -111,7 +111,7 @@ const Footer = () => {
                   key={label}
                   href="#"
                   aria-label={label}
-                  className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                  className="text-gray-600 hover:text-indigo-600 transition-colors duration-300"
                 >
                   <Icon className="text-2xl" />
                 </a>

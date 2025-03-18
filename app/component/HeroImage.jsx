@@ -52,7 +52,7 @@ const HeroImagePage = () => {
                 height={430}
                 className="mt-6 md:mt-0"
               />
-            </section>
+      </section>
     </div>
   )
 }

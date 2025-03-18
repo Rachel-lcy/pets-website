@@ -122,3 +122,9 @@ npm install lucide-react
 - [Add AboutUs page]
 - [Add Contact page]
 - [Add Services page]
+- [Add Store page]
+
+## Update components
+
+- [ Update Homepage]
+  ``I rewrite and redesign the home page and make this website more better

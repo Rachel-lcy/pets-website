@@ -16,7 +16,7 @@ export default function Home() {
       {/* Hero Section */}
       <HeroImagePage />
 
-      {/* 🎯 Intro Section */}
+      {/* Intro Section */}
       <section className="text-center py-16 mb-10">
         <small className="text-gray-400 text-lg">Intro</small>
         <h2 className="text-4xl font-bold text-gray-900">Get to know us more</h2>
@@ -47,7 +47,7 @@ export default function Home() {
       <Services />
 
 
-      {/* 🎯 Featured Products */}
+      {/* Featured Products */}
       <section className="bg-[#FDF2D9] py-16 text-center my-10 ">
         <div className="leading-loose">
           <small className="text-gray-400 text-lg">Products</small>
@@ -100,12 +100,10 @@ export default function Home() {
       </section>
 
       <Benefits />
-
       <Testimonials />
       <InstagramSection />
       <Footer />
 
-      
     </div>
   );
 }

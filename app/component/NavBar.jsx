@@ -34,6 +34,7 @@ export default function NavBar(){
         <div className="hidden md:flex space-x-6 text-xl  ">
           <Link href='/' className='mr-3 text-xl hover:underline  text-indigo-900'>Home </Link>
           <Link href='/services' className='mr-3 text-xl hover:underline  text-indigo-900'>Services </Link>
+          <Link href='/store' className='mr-3 text-xl hover:underline  text-indigo-900'>Store </Link>
           <Link href='/about' className='mr-3 text-xl hover:underline  text-indigo-900'>About </Link>
           <Link href='/contact' className='mr-3 text-xl hover:underline text-indigo-900'>Contact </Link>
 
@@ -59,6 +60,7 @@ export default function NavBar(){
             <div className="flex flex-col space-y-4 p-4 text-lg hover:underline">
               <Link href='/' className='mr-3 text-xl'>Home </Link>
               <Link href='/services' className='mr-3 text-xl'>Services </Link>
+              <Link href='/store' className='mr-3 text-xl '>Store </Link>
               <Link href='/about' className='mr-3 text-xl'>About </Link>
               <Link href='/contact' className='mr-3 text-xl'>Contact </Link>
               {userId && <Link href="/dashboard" className="text-gray-900 hover:text-blue-600" onClick={() => setIsOpen(false)}>Dashboard</Link>}
@@ -78,58 +80,3 @@ export default function NavBar(){
     </nav>
   )
 }
-
-// export default function NavBar() {
-//   const {userId} = useAuth();
-//   const [isOpen, setIsOpen] = useState(false);
-
-//   return (
-//     <nav className='flex items-center justify-between px-6 py-4 mb-5 my-5'>
-//       <div >
-//         <Link href='/' className='mr-3 text-xl'>Home </Link>
-//         <Link href='/contact' className='mr-3 text-xl'>Community </Link>
-//         <Link href='/about' className='mr-3 text-xl'>About </Link>
-//         <Link href='/contact' className='mr-3 text-xl'>Contact </Link>
-//         <Link href='/dashboard' className='mr-3 text-xl'>Dashboard </Link>
-//       </div>
-
-//       <div>
-//         <Link href="/">
-//           <Image
-//             src={Logo.src}
-//             alt='Peak Pets Logo'
-//             width = {260}
-//             height={150}
-//             quality ={100}
-//           />
-//         </Link>
-//       </div>
-
-//       <div className='flex'>
-//         {!userId && (
-//           <>
-//             <Link href="/sign-in" className='text-gray-900 hover:text-gray-600 mr-4 text-xl'>
-//               Sign in
-//             </Link>
-//             <Link href="sign-up" className='text-gray-900 hover:text-gray-600 mr-4 text-xl'>
-//               Sign up
-//             </Link>
-//           </>
-//         )}
-
-//         {userId && (
-//         <div>
-//           <Link href="/profile" className='text-gray-900 hover:text-gray-600 mr-4 text-xl'>
-//           Profile
-//           </Link>
-//         </div>
-//         )}
-
-//         <div>
-//           <UserButton className="flex" afterSignOutUrl='/'/>
-//         </div>
-//       </div>
-//     </nav>
-
-//   )
-// }
