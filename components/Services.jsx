@@ -73,7 +73,7 @@ export default function Services(){
           </div>
         </div>
 
-        <div className="flex justify-center items-center mb-15">
+        <div className="flex justify-center items-center ">
           <div className="flex-row justify-start p-4">
             <Image
               src="/assets/services/1.jpg"
@@ -101,6 +101,38 @@ export default function Services(){
             Pamper your pet with our top-notch grooming services! <br />From stylish cuts to refreshing baths, we make every visit a tail-wagging experience.
             </p>
           </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center items-center">
+          <div className="grid">
+          <Image
+                src="/assets/services/icon-5.png"
+                alt="Service 5"
+                width={60}
+                height={60}
+                className="rounded drop-shadow-sm"
+              />
+            <div>
+              <h3 className="text-3xl font-semibold tracking-wide leading-loose ">
+              Premium Pet Products for Your Furry Friends!
+              </h3>
+            </div>
+            <div>
+              <p className="text-gray-400 mt-2 tracking-wide leading-loose">
+                From cozy beds to fun toys, we offer what your pet needs for a happy and healthy life.<br />
+                Find the best treats and food options that promote well-being and vitality for your furry friend.
+              </p>
+            </div>
+          </div>
+          <div className="flex-row justify-start p-4">
+            <Image
+              src="/assets/services/4.jpg"
+              alt="Service 4"
+              width={580}
+              height={400}
+              className="rounded drop-shadow-sm"
+            />
           </div>
         </div>
 
