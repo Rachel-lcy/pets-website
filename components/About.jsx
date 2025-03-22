@@ -63,7 +63,7 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b ">
       {/* Company Overview */}
-      <section className="py-20 px-4 max-w-7xl mx-auto  bg-white my-0">
+      <section className="py-10 px-4 max-w-7xl mx-auto  bg-white my-0">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-6 ">Our Story</h2>
           <p className="text-lg text-gray-600 leading-relaxed">
@@ -75,7 +75,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team Members */}
-      <section className="py-20 px-4 my-0">
+      <section className="py-10 px-4 my-0">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">Meet Our Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -100,7 +100,7 @@ const AboutUs = () => {
       </section>
 
       {/* Values and Principles */}
-      <section className="py-20 px-4">
+      <section className="py-10 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-800 mb-16">Our Values</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

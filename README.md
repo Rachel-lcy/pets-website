@@ -126,5 +126,11 @@ npm install lucide-react
 
 ## Update components
 
-- [ Update Homepage]
+- [ Update the whole Homepage]
   ``I rewrite and redesign the home page and make this website more better
+- [ Make the Website more responsive]
+
+## Other aspects
+
+- [API keys]
+  ``regenerate the API keys

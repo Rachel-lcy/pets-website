@@ -1,13 +1,13 @@
 "use client"
 import { Roboto } from "next/font/google";
 import "./globals.css";
-import NavBar from "./component/NavBar";
+import NavBar from "../components/NavBar";
 import { ClerkProvider } from "@clerk/nextjs";
-import HeroImage from "./component/HeroImage";
-import Footer from "./component/Footer";
-import TestimonialPage from "./component/Testimonials";
+import HeroImage from "../components/HeroImage";
+import Footer from "../components/Footer";
+import TestimonialPage from "../components/Testimonials";
 import { usePathname } from "next/navigation";
-import AboutUs from "./component/About";
+import AboutUs from "../components/About";
 
 
 const roboto = Roboto({

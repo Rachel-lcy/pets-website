@@ -1,7 +1,7 @@
 "use profile"
 import { UserProfile } from "@clerk/nextjs";
 import React from 'react'
-import Footer from "../component/Footer";
+import Footer from "../../components/Footer";
 
 
 const ProfilePage = () => {
