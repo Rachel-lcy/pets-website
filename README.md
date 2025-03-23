@@ -129,8 +129,10 @@ npm install lucide-react
 - [ Update the whole Homepage]
   ``I rewrite and redesign the home page and make this website more better
 - [ Make the Website more responsive]
-
-## Other aspects
-
 - [API keys]
   ``regenerate the API keys
+
+## Other Improvement aspects
+
+- [ Use CMS to display Store's products]
+  `` Next step, I will improve my website store page bu using CMS to display products and add SLUG to dynamically make products routes!

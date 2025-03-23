@@ -5,10 +5,13 @@ import Image from 'next/image';
 import {UserButton, useAuth} from '@clerk/nextjs';
 import { useState } from 'react';
 import {Menu, X} from 'lucide-react';
+import { usePathname } from 'next/navigation';
+
 
 export default function NavBar(){
   const {userId} = useAuth();
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
   return(
     <nav className="bg-white ">
@@ -32,11 +35,21 @@ export default function NavBar(){
         </button>
 
         <div className="hidden md:flex space-x-6 text-xl  ">
-          <Link href='/' className='mr-3 text-xl hover:underline  text-indigo-900'>Home </Link>
-          <Link href='/services' className='mr-3 text-xl hover:underline  text-indigo-900'>Services </Link>
-          <Link href='/store' className='mr-3 text-xl hover:underline  text-indigo-900'>Store </Link>
-          <Link href='/about' className='mr-3 text-xl hover:underline  text-indigo-900'>About </Link>
-          <Link href='/contact' className='mr-3 text-xl hover:underline text-indigo-900'>Contact </Link>
+          <Link href='/' className={`mr-3 hover:underline ${
+            pathname === '/' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'
+          }`}>Home </Link>
+          <Link href='/services'  className={`mr-3 hover:underline ${
+            pathname === '/services' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'
+          }`}>Services </Link>
+          <Link href='/store'  className={`mr-3 hover:underline ${
+            pathname === '/store' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'
+          }`}>Store </Link>
+          <Link href='/about'  className={`mr-3 hover:underline ${
+            pathname === '/about' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'
+          }`}>About </Link>
+          <Link href='/contact'  className={`mr-3 hover:underline ${
+            pathname === '/contact' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'
+          }`}>Contact </Link>
 
         </div>
 
