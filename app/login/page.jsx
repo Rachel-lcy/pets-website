@@ -35,7 +35,7 @@ const SignInPage = () => {
     }
   };
   return (
-    <div className='border p-5 rounded ' style={{ width: '500px' }}>
+    <div className='border p-5 rounded w-8/12' >
       <h1 className='mb-4 flex justify-center items-center text-3xl font-bold'>Log In</h1>
         <form onSubmit={handleSubmit} className='space-y-4 md:space-y-6'>
           <div>
