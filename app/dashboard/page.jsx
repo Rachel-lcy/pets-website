@@ -51,7 +51,7 @@ const DashboardPage = () => {
         <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
           {petData.map((pet, index) => (
             <div key={index} className="card shadow-md p-4 rounded-lg">
-              <Image className="card-image" src={pet.src} width={440} height={327} alt={pet.title} />
+              <Image className="card-image" src={pet.src} width={400} height={300} alt={pet.title} />
               <h2 className="card-title">{pet.title}</h2>
               <p className="card-text">{pet.description}</p>
             </div>

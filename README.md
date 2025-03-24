@@ -34,6 +34,10 @@ npm install react-icons
 Add ClerkProvider to the layout file, cover all the <html></html>;
 ```
 
+```bash
+git rm --cached .env.local
+```
+
 ## Resource
 
 - [Authentication with Clerk](https://clerk.com/docs/quickstarts/nextjs-pages-router)
@@ -135,4 +139,4 @@ npm install lucide-react
 ## Other Improvement aspects
 
 - [ Use CMS to display Store's products]
-  `` Next step, I will improve my website store page bu using CMS to display products and add SLUG to dynamically make products routes!
+  `` Next step, I will improve my website store page bu using CMS to display products and add SLUG to dynamically make products routes clearly!
