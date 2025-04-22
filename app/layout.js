@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import TestimonialPage from "../components/Testimonials";
 import { usePathname } from "next/navigation";
 import AboutUs from "../components/About";
+import { CartProvider } from "./context/CartContext";
 
 
 const roboto = Roboto({
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
   const pathname = usePathname();
   return (
     < ClerkProvider>
+      <CartProvider>
       <html lang="en">
         <body className={roboto.className}>
           <NavBar />
@@ -31,6 +33,7 @@ export default function RootLayout({ children }) {
           {/* < AboutUs /> */}
         </body>
       </html>
+      </CartProvider>
     </ClerkProvider>
   );
 }

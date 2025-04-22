@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Claw from "/public/assets/heroimage/claw.png"
 import HoldPet from "/public/assets/products/holdpet.png"
@@ -5,8 +6,10 @@ import Image from 'next/image'
 import Dog from "/public/assets/heroimage/dog.png"
 import InstagramSection from '../../components/InstagramSection'
 import Footer from '../../components/Footer'
+import { useCart } from '../context/CartContext'
 
 const StorePage = () => {
+  const { addToCart } = useCart();
   return(
   <div>
     <div className='flex justify-center items-center  w-screen mt-10'>
@@ -136,6 +139,12 @@ const StorePage = () => {
           <p className="text-lg font-bold mt-2">
             {item.price} <span className="line-through text-gray-500">{item.oldPrice}</span>
           </p>
+          <button
+            onClick={() => addToCart(item)}
+            className="mt-4 bg-purple-300 text-white px-2 py-2 rounded hover:bg-purple-600 w-full cursor-pointer"
+          >
+            Add to Cart
+          </button>
         </div>
       ))}
     </div>
