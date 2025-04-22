@@ -1,6 +1,11 @@
-## README
+# 🐾 Peak Pets - Pet Products E-Commerce Website
 
-``Goal: set up Clerk authentication for logo in,sign up, logo out; when the user sign up, you will automatically transfer to the Dashboard!
+## Overview
+
+Peak Pets is a fully responsive e-commerce website for pet products.
+It features a dynamic store page, a working shopping cart, and a clean UI.
+
+This project was built as part of my Google Developer Program membership,leveraging modern web technologies and professional CMS integration (Contentful).
 
 ## Getting Started
 
@@ -37,6 +42,15 @@ Add ClerkProvider to the layout file, cover all the <html></html>;
 ```bash
 git rm --cached .env.local
 ```
+
+## 🚀 Technologies Used
+
+- **Next.js** (React Framework)
+- **Tailwind CSS** (Modern styling)
+- **Contentful CMS** (Dynamic product content management)
+- **Clerk Authentication** (Profile/Login management)
+- **Lucide React** (Icons library)
+- **React Context API** (Cart state management)
 
 ## Resource
 
@@ -140,3 +154,26 @@ npm install lucide-react
 
 - [ Use CMS to display Store's products]
   `` Next step, I will improve my website store page bu using CMS to display products and add SLUG to dynamically make products routes clearly!
+
+# 21st April update
+
+## 🛒 Cart System Features
+
+- **Add to Cart**: Products can be added individually to the cart.
+- **View Cart**: `/cart` page shows all selected products with details.
+- **Remove Items**: Each item in cart can be individually removed.
+- **Clear Cart**: Users can empty the entire cart with one click.
+- **Cart Badge**: A dynamic cart icon on the navigation bar shows the number of items in the cart.
+- **Persistent Cart State** (optional upgrade planned): Using LocalStorage.
+
+## How the Cart System Works
+
+- CartContext.jsx manages the global cart state using React Context.
+
+- The <CartProvider> wraps the entire application in layout.jsx.
+
+- Store page uses useCart() hook to call addToCart(item) when users click "Add to Cart."
+
+- Cart page (/cart) lists all items from cart state, and offers Remove and Clear buttons.
+
+- The Navigation Bar shows a shopping cart icon with dynamic item count badge.
