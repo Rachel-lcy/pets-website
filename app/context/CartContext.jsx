@@ -1,3 +1,5 @@
+'use client'
+import client from "@/lib/contentful";
 import {createContext, useContext, useState} from "react";
 
 const CartContext = createContext();

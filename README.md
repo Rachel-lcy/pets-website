@@ -177,3 +177,6 @@ npm install lucide-react
 - Cart page (/cart) lists all items from cart state, and offers Remove and Clear buttons.
 
 - The Navigation Bar shows a shopping cart icon with dynamic item count badge.
+
+bash
+`npm install contentful`

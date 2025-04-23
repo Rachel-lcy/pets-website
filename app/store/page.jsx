@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import React from 'react'
 import Claw from "/public/assets/heroimage/claw.png"
 import HoldPet from "/public/assets/products/holdpet.png"
@@ -7,9 +7,17 @@ import Dog from "/public/assets/heroimage/dog.png"
 import InstagramSection from '../../components/InstagramSection'
 import Footer from '../../components/Footer'
 import { useCart } from '../context/CartContext'
+import client from '@/lib/contentful'
+import { getProducts } from '@/lib/getProducts'
+import ProductCard from '@/components/ProductCard'
 
-const StorePage = () => {
+
+
+export default async function StorePage() {
   const { addToCart } = useCart();
+  const products = await getProducts();
+
+
   return(
   <div>
     <div className='flex justify-center items-center  w-screen mt-10'>
@@ -80,7 +88,7 @@ const StorePage = () => {
       <div className='border-b border-gray-300 my-4'></div>
     </div>
 
-    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 px-10">
+    {/* <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10 px-10">
       {[
         {
           title: "Dog Trash Bag",
@@ -147,7 +155,15 @@ const StorePage = () => {
           </button>
         </div>
       ))}
+    </div> */}
+   
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {products.map((product) => {
+        <ProductCard key={product.slug} product={product}/>
+      })}
     </div>
+   
+
     <div className='flex items-center justify-center mt-10'>
       <button className=" bg-purple-500 text-gray px-6 py-3 rounded-full text-lg flex items-center gap-2 font-bold cursor-pointer text-white">
         Explore More Products
@@ -159,5 +175,3 @@ const StorePage = () => {
 
   )
 }
-
-export default StorePage
