@@ -1,4 +1,4 @@
-// "use client"
+"use client"
 import React from 'react'
 import Claw from "/public/assets/heroimage/claw.png"
 import HoldPet from "/public/assets/products/holdpet.png"
@@ -6,17 +6,11 @@ import Image from 'next/image'
 import Dog from "/public/assets/heroimage/dog.png"
 import InstagramSection from '../../components/InstagramSection'
 import Footer from '../../components/Footer'
-import { useCart } from '../context/CartContext'
-import client from '@/lib/contentful'
-import { getProducts } from '@/lib/getProducts'
-import ProductCard from '@/components/ProductCard'
+
 
 
 
 export default async function StorePage() {
-  const { addToCart } = useCart();
-  const products = await getProducts();
-
 
   return(
   <div>
@@ -157,11 +151,17 @@ export default async function StorePage() {
       ))}
     </div> */}
    
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {products.map((product) => {
-        <ProductCard key={product.slug} product={product}/>
+        <ProductCard key={product.fields.slug} product={product.fields}/>
       })}
-    </div>
+      <button
+        onClick={() => addToCart(item)}
+        className="mt-4 bg-purple-300 text-white px-2 py-2 rounded hover:bg-purple-600 w-full cursor-pointer"
+      >
+      Add to Cart
+    </button>
+    </div> */}
    
 
     <div className='flex items-center justify-center mt-10'>
