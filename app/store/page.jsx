@@ -1,11 +1,11 @@
-import { getProducts } from '@/lib/getProducts';
+import { getStaticProps } from '@/lib/contentful';
 import StoreHero from './StoreHero';
 import ProductList from './ProductList';
 import InstagramSection from '@/components/InstagramSection';
 import Footer from '@/components/Footer';
 
 export default async function StorePage() {
-  const products = await getProducts();
+  const products = await getStaticProps();
 
   return (
     <div>

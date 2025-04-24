@@ -1,10 +1,8 @@
 import Image from 'next/image';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-export default function ProductCard({ product, onAddToCart }) {
-  const imageUrl = product.image?.fields?.file?.url
-    ? `https:${product.image.fields.file.url}`
-    : '/placeholder.jpg';
+
+export default function ProductCard({ product}) {
+  const {title, slug, thumbnail, oldPrice } = product.fields
 
   return (
     <div className="bg-white shadow-lg p-6 rounded-lg">
@@ -17,14 +15,10 @@ export default function ProductCard({ product, onAddToCart }) {
         )}
       </p>
 
-      {product.description && typeof product.description === 'object' ? (
-        documentToReactComponents(product.description)
-      ) : (
-        <p>{product.description}</p>
-      )}
+      
 
       <button
-        onClick={onAddToCart}
+        // onClick={onAddToCart}
         className="mt-4 bg-purple-300 text-white px-2 py-2 rounded hover:bg-purple-600 w-full cursor-pointer"
       >
         Add to Cart
