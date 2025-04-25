@@ -179,4 +179,8 @@ npm install lucide-react
 - The Navigation Bar shows a shopping cart icon with dynamic item count badge.
 
 bash
-`npm install contentful`
+
+```bash
+npm install
+npm install contentful
+```

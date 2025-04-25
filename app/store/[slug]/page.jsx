@@ -56,7 +56,7 @@ export default async function ProductDetails({ params }) {
       </div>
 
       <button
-        // onClick={onAddToCart}
+        onClick={handleAddToCart}
         className="mt-4 bg-purple-300 text-white px-2 py-2 rounded hover:bg-purple-600 w-full cursor-pointer"
       >
         Add to Cart
