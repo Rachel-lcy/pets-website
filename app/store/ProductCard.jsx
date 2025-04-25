@@ -1,9 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useCart } from '../context/CartContext';
 
 
-export default function ProductCard({ product}) {
+export default function ProductCard({ product, onAddToCart}) {
   const {title, slug, thumbnail, oldPrice,currency, newPrice } = product.fields
+  const { addToCart } = useCart();
+  const handleAddToCart = () => {
+    addToCart(product);
+  };
+
 
   return (
     <div className="bg-white shadow-lg p-6 rounded-lg">
@@ -23,11 +29,11 @@ export default function ProductCard({ product}) {
         <h4 className="text-red-600">${product.fields.newPrice}</h4>
         {product.fields.oldPrice && (
         <h4 className="line-through text-gray-500">${product.fields.oldPrice}</h4>
-  )}
-</div>
+        )}
+      </div>
     <div className='flex justify-between'>
       <button
-        // onClick={onAddToCart}
+        onClick={handleAddToCart}
         className="mt-4 bg-purple-300 text-white px-2 py-2 rounded hover:bg-purple-600 w-5/12 cursor-pointer"
       >
         Add to Cart

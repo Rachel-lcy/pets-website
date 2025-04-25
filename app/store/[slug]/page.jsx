@@ -2,13 +2,13 @@ import { createClient } from 'contentful';
 import Image from 'next/image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-// 初始化 Contentful 客户端
+// Initialize Contentful client
 const client = createClient({
   space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
   accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,
 });
 
-// ✅ 用于生成所有静态路径
+// ✅ Generate static paths for all product slugs
 export async function generateStaticParams() {
   const res = await client.getEntries({ content_type: 'products' });
 
@@ -17,7 +17,7 @@ export async function generateStaticParams() {
   }));
 }
 
-// ✅ 产品详情页面（由 params.slug 加载具体内容）
+// ✅ Product detail page (dynamically fetched using slug)
 export default async function ProductDetails({ params }) {
   const res = await client.getEntries({
     content_type: 'products',
@@ -27,7 +27,7 @@ export default async function ProductDetails({ params }) {
   const product = res.items[0];
 
   if (!product) {
-    return <div className="p-8 text-center text-red-600">产品未找到</div>;
+    return <div className="p-8 text-center text-red-600">Product not found.</div>;
   }
 
   const { thumbnail, title, description, newPrice, oldPrice } = product.fields;
@@ -51,9 +51,16 @@ export default async function ProductDetails({ params }) {
         )}
       </div>
 
-      <div className="mt-6 prose prose-lg">
+      <div className="mt-6 prose prose-lg leading-loose">
         {documentToReactComponents(description)}
       </div>
+
+      <button
+        // onClick={onAddToCart}
+        className="mt-4 bg-purple-300 text-white px-2 py-2 rounded hover:bg-purple-600 w-full cursor-pointer"
+      >
+        Add to Cart
+      </button>
     </div>
   );
 }
