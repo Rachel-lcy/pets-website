@@ -18,7 +18,7 @@ export default function NavBar() {
   return (
     <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        
+
         {/* Logo */}
         <div className="flex items-center space-x-4">
           <Link href="/">
@@ -54,8 +54,15 @@ export default function NavBar() {
             <Link href="/profile" className="text-gray-900 hover:text-blue-600">Profile</Link>
           )}
           <UserButton afterSignOutUrl="/" />
+
           <Link href="/cart" className="relative flex items-center gap-2">
-            <ShoppingCart className="w-6 h-6 text-indigo-900 hover:text-purple-500" />Cart
+            <ShoppingCart className="w-6 h-6 text-indigo-900 hover:text-purple-500" />
+              Cart
+              {cartItems.length > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                {cartItems.length}
+                </span>
+              )}
           </Link>
         </div>
 
@@ -74,10 +81,17 @@ export default function NavBar() {
             <Link href="/store" onClick={() => setIsOpen(false)}>Store</Link>
             <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
             <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
-            
-            <Link href="/cart" onClick={() => setIsOpen(false)} className="flex items-center gap-2">
-              <ShoppingCart className="w-5 h-5" /> Cart
+
+            <Link href="/cart" onClick={() => setIsOpen(false)} className="relative flex items-center gap-2">
+              <ShoppingCart className="w-5 h-5" />
+              Cart
+              {cartItems.length > 0 && (
+                <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+                  {cartItems.length}
+                </span>
+              )}
             </Link>
+
             {!userId ? (
               <>
                 <Link href="/sign-in" onClick={() => setIsOpen(false)}>Sign in</Link>
