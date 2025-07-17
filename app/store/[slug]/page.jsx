@@ -1,6 +1,7 @@
 import { createClient } from 'contentful';
 import Image from 'next/image';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import AddToCartButton from '../../../components/AddToCartButton';
 
 // Initialize Contentful client
 const client = createClient({
@@ -17,7 +18,7 @@ export async function generateStaticParams() {
   }));
 }
 
-// ✅ Product detail page (dynamically fetched using slug)
+// Product detail page (dynamically fetched using slug)
 export default async function ProductDetails({ params }) {
   const res = await client.getEntries({
     content_type: 'products',
@@ -55,12 +56,7 @@ export default async function ProductDetails({ params }) {
         {documentToReactComponents(description)}
       </div>
 
-      <button
-        onClick={handleAddToCart}
-        className="mt-4 bg-purple-300 text-white px-2 py-2 rounded hover:bg-purple-600 w-full cursor-pointer"
-      >
-        Add to Cart
-      </button>
+       <AddToCartButton product={product} />
     </div>
   );
 }
