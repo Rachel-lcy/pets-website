@@ -36,7 +36,7 @@ export default function NavBar() {
         <div className="hidden md:flex items-center space-x-6 text-lg">
           <Link href="/" className={`hover:underline ${pathname === '/' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'}`}>Home</Link>
           <Link href="/services" className={`hover:underline ${pathname === '/services' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'}`}>Services</Link>
-          <Link href="/store" className={`hover:underline ${pathname === '/store' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'}`}>Store</Link>
+          <Link href="/store" className={`hover:underline ${pathname === '/store' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'}`}>Products</Link>
           <Link href="/about" className={`hover:underline ${pathname === '/about' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'}`}>About</Link>
           <Link href="/contact" className={`hover:underline ${pathname === '/contact' ? 'font-bold text-indigo-700 underline' : 'text-indigo-900'}`}>Contact</Link>
         </div>
@@ -78,7 +78,7 @@ export default function NavBar() {
           <div className="absolute top-[100px] left-0 right-0 bg-white shadow-lg z-50 p-6 flex flex-col space-y-4 text-lg">
             <Link href="/" onClick={() => setIsOpen(false)}>Home</Link>
             <Link href="/services" onClick={() => setIsOpen(false)}>Services</Link>
-            <Link href="/store" onClick={() => setIsOpen(false)}>Store</Link>
+            <Link href="/store" onClick={() => setIsOpen(false)}>Products</Link>
             <Link href="/about" onClick={() => setIsOpen(false)}>About</Link>
             <Link href="/contact" onClick={() => setIsOpen(false)}>Contact</Link>
 
